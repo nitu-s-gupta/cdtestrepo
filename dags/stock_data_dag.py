@@ -57,7 +57,8 @@ def get_data():
     blob.upload_from_string(data)
     print(f"data sucessfully uploadesd to {bucket}")
 
-
+print("Testing znitu")
+print(PROJECT_ID)
 with DAG('Stock_data',
          start_date=days_ago(1), 
          schedule_interval="@once",
@@ -68,7 +69,7 @@ with DAG('Stock_data',
 
     generate_uuid = PythonOperator(
             task_id="generate_uuid", 
-            python_callable=lambda: "the_demo_" + str(uuid.uuid4()),
+            python_callable=lambda: "the_demo_bucket",
             
         )
 
