@@ -26,7 +26,7 @@ default_args = {
 }
 
 def get_data():
-    # Tickers list for data extraction from yahoo finance
+    # Tickers list for data extraction from yahoo finance testing
     tickers = ['MSFT','AMZN','GOOGL']
 
     # Set start and end dates
